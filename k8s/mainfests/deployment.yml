@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-rest-api-app-deployment
+  labels:
+    app: go-rest-api-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: go-rest-api-app
+  template:
+    metadata:
+      labels:
+        app: go-rest-api-app
+    spec:
+      containers:
+      - name: go-rest-api-app
+        image: sachinayeshmantha/go-rest-api-app:v1
+        ports:
+        - containerPort: 8080
