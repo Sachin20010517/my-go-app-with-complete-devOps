@@ -37,6 +37,8 @@ func Router(app *fiber.App) {
 func RouteMappings(cg fiber.Router){
 	cg.Post("/CreateStudent",api.CreateStudentApi)
 	cg.Get("FindStudent",api.Find_Student_By_StudentId_API)
+	cg.Get("testGitOps",api.Find_Student_By_StudentId_API)
+
 }
 
 func DefaultMappings(cg fiber.Router) {
