@@ -67,7 +67,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-app:${{github.run_id}}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-go-app-with-complete-devOps:${{github.run_id}}
         # Whenever a developer make a commit, the tag  of docker image will create with new run id
 
   # update-newtag-in-helm-chart:

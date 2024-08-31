@@ -2,7 +2,7 @@ package functions
 
 import (
 	"context"
-	"errors"
+	// "errors"
 	"fmt"
 	"reflect"
 	"strings"
@@ -36,6 +36,7 @@ func UniqueCheck(obj interface{}, collectionName string, fields[]string) error {
 	if err != nil {
 		return nil
 	}else {
-		return errors.New(fmt.Sprintf("%v unique" , fields))
+		//return errors.New(fmt.Sprintf("%v unique" , fields))
+		return fmt.Errorf("%v unique", fields)
 	}
 }
