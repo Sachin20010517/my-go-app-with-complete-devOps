@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: go-rest-api-app
-        image: sachinayeshmantha/go-rest-api-app:v1
+        image: sachinayeshmantha/my-go-app-with-complete-devops:{{ .Values.image.tag }}
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
