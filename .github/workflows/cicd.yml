@@ -9,7 +9,6 @@ on:
       - 'helm/**' # Exclude the workflow to run on changes to the helm chart
       - 'k8s/**'
       - 'README.md'
-      - '.github/**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -67,7 +66,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-go-app-with-complete-devOps:${{github.run_id}}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-go-app-with-complete-devops:${{github.run_id}}
         # Whenever a developer make a commit, the tag  of docker image will create with new run id
 
   # update-newtag-in-helm-chart:
